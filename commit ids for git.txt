@@ -1,0 +1,24 @@
+
+git init
+git add stockmarket.html README.md Jenkinsfile
+git commit -m "Create StockMarket website and CI pipeline"
+git branch -M main
+git rev-parse HEAD
+git remote add origin https://github.com/YOUR_USERNAME/StockMarket.git
+git push -u origin main
+
+
+If you already ran git init, that's okay. If you already added a remote named origin, don't add it again.
+To see your actual commit ID, run:
+git rev-parse HEAD
+
+
+5. Connect Jenkins to GitHub
+1. Install and start Jenkins on your computer or use your college's Jenkins server.
+2. In Jenkins, select New Item, enter StockMarket-CI, choose Pipeline, and click OK.
+3. In the Pipeline configuration, select Pipeline script from SCM.
+4. Choose Git and enter your GitHub repository URL.
+5. Set the branch to */main and the script path to Jenkinsfile.
+6. Save, click Build Now, and open Console Output to check the result.
+For a private repository, Jenkins will also need GitHub credentials. A successful run should show the checkout, validation, and build stages passing.
+One detail about the footer: don't hardcode a commit ID into the same commit that it identifies. Changing the HTML to add that ID creates a new commit with a different ID. For your project demonstration, get the real ID using git rev-parse HEAD and show it separately in your report or Jenkins Console Output.
