@@ -5,193 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StockMarket | CCA2 CD Project</title>
-
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #0b1220;
-            color: white;
-        }
-
-        header {
-            background: #111c30;
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        header h1 {
-            color: #38bdf8;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 18px;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        .hero {
-            padding: 55px 7%;
-            background: linear-gradient(120deg, #142c4c, #0b1220);
-        }
-
-        .hero h2 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            color: #b8c6da;
-            line-height: 1.7;
-        }
-
-        main {
-            padding: 35px 7%;
-        }
-
-        .section-title {
-            margin: 20px 0;
-            color: #38bdf8;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #17243a;
-            border: 1px solid #293b55;
-            border-radius: 12px;
-            padding: 22px;
-        }
-
-        .card p {
-            color: #a9b8cd;
-            margin-bottom: 12px;
-        }
-
-        .price {
-            font-size: 26px;
-            font-weight: bold;
-            margin: 12px 0;
-        }
-
-        .up {
-            color: #4ade80;
-        }
-
-        .down {
-            color: #fb7185;
-        }
-
-        .watchlist {
-            margin-top: 35px;
-            background: #17243a;
-            border-radius: 12px;
-            padding: 22px;
-        }
-
-        input {
-            padding: 11px;
-            border: 1px solid #40516b;
-            border-radius: 6px;
-            background: #0b1220;
-            color: white;
-            margin: 8px 5px 8px 0;
-            max-width: 100%;
-        }
-
-        button {
-            background: #0284c7;
-            color: white;
-            border: none;
-            padding: 11px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #0369a1;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 18px;
-        }
-
-        th, td {
-            padding: 13px 8px;
-            text-align: left;
-            border-bottom: 1px solid #35445a;
-        }
-
-        th {
-            color: #38bdf8;
-        }
-
-        .news {
-            margin-top: 35px;
-        }
-
-        .news-item {
-            padding: 18px 0;
-            border-bottom: 1px solid #293b55;
-            line-height: 1.6;
-        }
-
-        footer {
-            background: #111c30;
-            text-align: center;
-            padding: 25px 12px;
-            margin-top: 35px;
-            color: #b8c6da;
-            line-height: 1.8;
-            overflow-wrap: anywhere;
-        }
-
-        footer strong {
-            color: #38bdf8;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #0b1220; color: white; }
+        header { background: #111c30; padding: 20px 7%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        header h1 { color: #38bdf8; }
+        nav a { color: white; text-decoration: none; margin-left: 18px; }
+        nav a:hover { color: #38bdf8; }
+        .hero { padding: 55px 7%; background: linear-gradient(120deg, #142c4c, #0b1220); }
+        .hero h2 { font-size: 36px; margin-bottom: 15px; }
+        .hero p { color: #b8c6da; line-height: 1.7; }
+        main { padding: 35px 7%; }
+        .section-title { margin: 20px 0; color: #38bdf8; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .card { background: #17243a; border: 1px solid #293b55; border-radius: 12px; padding: 22px; }
+        .card p { color: #a9b8cd; margin-bottom: 12px; }
+        .price { font-size: 26px; font-weight: bold; margin: 12px 0; }
+        .up { color: #4ade80; }
+        .down { color: #fb7185; }
+        .watchlist { margin-top: 35px; background: #17243a; border-radius: 12px; padding: 22px; }
+        input { padding: 11px; border: 1px solid #40516b; border-radius: 6px; background: #0b1220; color: white; margin: 8px 5px 8px 0; max-width: 100%; }
+        button { background: #0284c7; color: white; border: none; padding: 11px 16px; border-radius: 6px; cursor: pointer; }
+        button:hover { background: #0369a1; }
+        table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+        th, td { padding: 13px 8px; text-align: left; border-bottom: 1px solid #35445a; }
+        th { color: #38bdf8; }
+        .news { margin-top: 35px; }
+        .news-item { padding: 18px 0; border-bottom: 1px solid #293b55; line-height: 1.6; }
+        footer { background: #111c30; text-align: center; padding: 25px 12px; margin-top: 35px; color: #b8c6da; line-height: 1.8; overflow-wrap: anywhere; }
+        footer strong { color: #38bdf8; }
+        .deployment-note { display: inline-block; margin-top: 10px; padding: 8px 14px; border: 1px solid #38bdf8; border-radius: 6px; color: #38bdf8; }
         @media (max-width: 600px) {
-            header {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            nav a {
-                margin: 0 12px 0 0;
-            }
-
-            .hero h2 {
-                font-size: 28px;
-            }
-
-            .table-wrapper {
-                overflow-x: auto;
-            }
+            header { align-items: flex-start; flex-direction: column; }
+            nav a { margin: 0 12px 0 0; }
+            .hero h2 { font-size: 28px; }
+            .table-wrapper { overflow-x: auto; }
         }
     </style>
 </head>
-
 <body>
-
 <header>
     <h1>📈 StockMarket</h1>
     <nav>
@@ -203,98 +55,36 @@
 
 <section class="hero">
     <h2>Welcome to StockMarket</h2>
-    <p>
-        Explore market indices, track your favourite stocks,
-        and view market updates in one place.
-    </p>
+    <p>Explore market indices, track your favourite stocks, and view market updates in one place.</p>
     <p>Simple dashboard for learning about the stock market.</p>
 </section>
 
 <main>
     <section id="markets">
         <h2 class="section-title">Market Overview</h2>
-
         <div class="cards">
-            <div class="card">
-                <p>NIFTY 50</p>
-                <div class="price">24,850.50</div>
-                <span class="up">▲ 0.85%</span>
-            </div>
-
-            <div class="card">
-                <p>SENSEX</p>
-                <div class="price">81,200.25</div>
-                <span class="up">▲ 0.62%</span>
-            </div>
-
-            <div class="card">
-                <p>NASDAQ</p>
-                <div class="price">18,450.80</div>
-                <span class="down">▼ 0.25%</span>
-            </div>
-
-            <div class="card">
-                <p>GOLD</p>
-                <div class="price">72,500.00</div>
-                <span class="up">▲ 0.35%</span>
-            </div>
+            <div class="card"><p>NIFTY 50</p><div class="price">24,850.50</div><span class="up">▲ 0.85%</span></div>
+            <div class="card"><p>SENSEX</p><div class="price">81,200.25</div><span class="up">▲ 0.62%</span></div>
+            <div class="card"><p>NASDAQ</p><div class="price">18,450.80</div><span class="down">▼ 0.25%</span></div>
+            <div class="card"><p>GOLD</p><div class="price">72,500.00</div><span class="up">▲ 0.35%</span></div>
         </div>
-
-        <p style="color:#a9b8cd; margin-top:15px;">
-            Note: All market values are illustrative demo data,
-            not live financial information.
-        </p>
+        <p style="color:#a9b8cd; margin-top:15px;">Note: All market values are illustrative demo data, not live financial information.</p>
     </section>
 
     <section class="watchlist" id="watchlist">
         <h2 class="section-title">My Watchlist</h2>
-
         <form id="stockForm">
-            <input
-                type="text"
-                id="stockName"
-                placeholder="Stock name (e.g. TCS)"
-                required
-                maxlength="20"
-            >
-
-            <input
-                type="number"
-                id="stockPrice"
-                placeholder="Price"
-                required
-                min="0.01"
-                step="0.01"
-            >
-
+            <input type="text" id="stockName" placeholder="Stock name (e.g. TCS)" required maxlength="20">
+            <input type="number" id="stockPrice" placeholder="Price" required min="0.01" step="0.01">
             <button type="submit">Add Stock</button>
         </form>
-
         <div class="table-wrapper">
             <table>
-                <thead>
-                    <tr>
-                        <th>Stock</th>
-                        <th>Price (₹)</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
+                <thead><tr><th>Stock</th><th>Price (₹)</th><th>Action</th></tr></thead>
                 <tbody id="stockList">
-                    <tr>
-                        <td>RELIANCE</td>
-                        <td>1,450.00</td>
-                        <td><button type="button" onclick="removeStock(this)">Remove</button></td>
-                    </tr>
-                    <tr>
-                        <td>TCS</td>
-                        <td>3,250.00</td>
-                        <td><button type="button" onclick="removeStock(this)">Remove</button></td>
-                    </tr>
-                    <tr>
-                        <td>INFOSYS</td>
-                        <td>1,500.00</td>
-                        <td><button type="button" onclick="removeStock(this)">Remove</button></td>
-                    </tr>
+                    <tr><td>RELIANCE</td><td>1,450.00</td><td><button type="button" onclick="removeStock(this)">Remove</button></td></tr>
+                    <tr><td>TCS</td><td>3,250.00</td><td><button type="button" onclick="removeStock(this)">Remove</button></td></tr>
+                    <tr><td>INFOSYS</td><td>1,500.00</td><td><button type="button" onclick="removeStock(this)">Remove</button></td></tr>
                 </tbody>
             </table>
         </div>
@@ -302,21 +92,9 @@
 
     <section class="news" id="news">
         <h2 class="section-title">Market News</h2>
-
-        <div class="news-item">
-            <h3>Indian Markets</h3>
-            <p>Follow major market indices and learn how market movements work.</p>
-        </div>
-
-        <div class="news-item">
-            <h3>Technology Sector</h3>
-            <p>Technology companies remain an important area for investors to monitor.</p>
-        </div>
-
-        <div class="news-item">
-            <h3>Investment Awareness</h3>
-            <p>Research companies carefully and understand the risks before investing.</p>
-        </div>
+        <div class="news-item"><h3>Indian Markets</h3><p>Follow major market indices and learn how market movements work.</p></div>
+        <div class="news-item"><h3>Technology Sector</h3><p>Technology companies remain an important area for investors to monitor.</p></div>
+        <div class="news-item"><h3>Investment Awareness</h3><p>Research companies carefully and understand the risks before investing.</p></div>
     </section>
 </main>
 
@@ -325,6 +103,8 @@
     Git Commit ID: <strong id="commitId">Will appear after the first Git commit</strong><br>
     Built with HTML, CSS, JavaScript, GitHub and Jenkins<br>
     Demo prices only · Not financial advice
+    <br>
+    <span class="deployment-note">Updated Version — Deployed using Jenkins CI/CD Pipeline</span>
 </footer>
 
 <script>
@@ -333,10 +113,8 @@
 
     stockForm.addEventListener("submit", function(event) {
         event.preventDefault();
-
         const nameInput = document.getElementById("stockName");
         const priceInput = document.getElementById("stockPrice");
-
         const name = nameInput.value.trim().toUpperCase();
         const price = Number(priceInput.value);
 
@@ -366,7 +144,6 @@
         actionCell.appendChild(removeButton);
         row.append(nameCell, priceCell, actionCell);
         stockList.appendChild(row);
-
         stockForm.reset();
     });
 
@@ -374,6 +151,5 @@
         button.closest("tr").remove();
     }
 </script>
-
 </body>
 </html>
