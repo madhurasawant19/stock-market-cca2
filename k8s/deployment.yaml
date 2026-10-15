@@ -1,0 +1,21 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stockmarket
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stockmarket
+  template:
+    metadata:
+      labels:
+        app: stockmarket
+    spec:
+      containers:
+        - name: stockmarket
+          image: madhuraaa19/stockmarket-website:latest
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
